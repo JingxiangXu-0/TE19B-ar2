@@ -16,8 +16,9 @@ namespace Uppgift_2_9
       //   int path = Url.IndexOf("/");
       string protocol = Url.Substring(0, protocolIndex + 2);
       string subDomain = Url.Substring(protocolIndex + 2, subDomainIndex - 8);
-      string domain = Url.Substring(protocolIndex + 2, domainIndex - 9);
+      string domain = Url.Substring(subDomainIndex - 8, domainIndex - 9);
 
+      Console.WriteLine("Email :" + Url);
       Console.WriteLine("Protocol : " + protocol);
       Console.WriteLine("Subdomain : " + subDomain);
       Console.WriteLine("Domain : " + domain);
