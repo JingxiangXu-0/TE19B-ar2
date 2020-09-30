@@ -10,7 +10,7 @@ namespace Projekt_1
 
       Console.WriteLine("Eyy bror, jag har baxat chok mycket parra igår, ska vi beställa kebab? Jag är chok hungrig mannen.");
 
-      string Svar1 = Console.ReadLine().ToLower(); ;
+      string Svar1 = Console.ReadLine().ToLower();
 
       if (Svar1 == "ja")
       {
