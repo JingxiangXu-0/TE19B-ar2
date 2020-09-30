@@ -14,7 +14,7 @@ namespace Projekt_1
 
       if (Svar1 == "ja")
       {
-        Console.WriteLine("Vill du ha något att dricka?");
+        Console.WriteLine("Yani, Vill du dricka något?");
         Svar2();
       }
 
@@ -77,20 +77,16 @@ namespace Projekt_1
 
       if (Svar4 == "cola")
       {
-        Console.WriteLine("Ait bror, jag har beställt en cola till dig. Maten är här om 20 minuter");
+        Console.WriteLine("bror bestäm dig, jag kommer då beställa en cola till dig. Maten är här om 20 minuter");
       }
 
-      else if (Svar4 == "Sprite")
+      else if (Svar4 == "sprite")
       {
         Console.WriteLine("Ait bror, jag har beställt sprite till dig. Maten är här om 20 minuter");
       }
-      else
-      {
-        Console.WriteLine("Ait bror, jag har beställt ingen dricka alls till dig. Maten är här om 20 minuter");
-      }
 
+      Console.ReadLine();
     }
-
   }
 }
 
