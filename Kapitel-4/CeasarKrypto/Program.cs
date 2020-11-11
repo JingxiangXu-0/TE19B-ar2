@@ -46,7 +46,7 @@ namespace CeasarKrypto
         Console.WriteLine("bokstaven " + bokstav + " krypteras till " + krypteradBokstav);
 
         // Samla ihop bokstäverna 
-        krypteradText += krypteradBokstav.ToString;
+        // krypteradText += krypteradBokstav.ToString;
 
         // Skriv ut svaret
         Console.WriteLine("Den slutgiltiga meningen är: " + krypteradText);
