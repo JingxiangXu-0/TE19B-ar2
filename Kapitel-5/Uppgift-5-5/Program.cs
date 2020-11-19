@@ -16,7 +16,7 @@ namespace Uppgift_5_5
         år[antalÅlder] = int.Parse(Console.ReadLine());
         antalÅlder++;
 
-        if (antalÅlder <= år.Length)
+        if (antalÅlder >= år.Length)
         {
           Console.WriteLine("Programmet har inte plats för fler åldrar");
           break;
@@ -26,7 +26,7 @@ namespace Uppgift_5_5
           Console.WriteLine("Vill du skriva in fler åldrar?");
           svar = Console.ReadLine();
         }
-      } while (svar != "n" || antalÅlder < år.Length);
+      } while (svar != "n" && antalÅlder < år.Length);
 
       Console.WriteLine("Här är åldrarna du skrev:");
       for (int i = 0; i < antalÅlder; i++)
