@@ -14,6 +14,8 @@ namespace Morse_Tolk
       string morsemeddelande = "";
 
 
+
+
       for (int i = 0; i < meddelande.Length; i++)
       {
         string bokstav = meddelande[i].ToString();
