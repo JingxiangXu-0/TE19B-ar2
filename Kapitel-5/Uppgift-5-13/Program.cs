@@ -20,7 +20,7 @@ namespace Uppgift_5_13
       Random slump = new Random();
       int i = slump.Next(0, Heltaler.Length);
 
-      Console.WriteLine("Talet med index " + i + " har värdet " + Heltaler[random]);
+      Console.WriteLine("Talet med index " + i + " har värdet " + Heltaler[slump]);
 
     }
   }
