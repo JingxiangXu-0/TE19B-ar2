@@ -86,6 +86,7 @@ namespace Projekt_2
             string[] BordInfoNy = new string[2];
             Console.WriteLine("Hur många gäster finns vid bordet?");
             BordInfoNy[0] = Console.ReadLine();
+
             Console.WriteLine("Skriv in Bordets namn");
             BordInfoNy[1] = Console.ReadLine();
             bordsInnehåll[ändraBordsnummer - 1] = string.Join(";", BordInfoNy);
