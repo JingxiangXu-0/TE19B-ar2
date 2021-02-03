@@ -43,7 +43,8 @@ namespace Projekt_2
         Console.WriteLine("1. Visa alla bord");
         Console.WriteLine("2. Lägg ändra bordsinformation");
         Console.WriteLine("3. Markera att ett bord är tomt");
-        Console.WriteLine("4. Avsluta programmet");
+        Console.WriteLine("4. Ändra Max antal gäster per bord");
+        Console.WriteLine("5. Avsluta programmet");
         Console.Write("\nJag väljer alternativ : ");
         menuVal = int.Parse(Console.ReadLine());
 
@@ -86,6 +87,7 @@ namespace Projekt_2
             string[] BordInfoNy = new string[2];
             Console.WriteLine("Hur många gäster finns vid bordet?");
             BordInfoNy[0] = Console.ReadLine();
+            // ToDo = Max antal gäster per bord
 
             Console.WriteLine("Skriv in Bordets namn");
             BordInfoNy[1] = Console.ReadLine();
@@ -112,6 +114,11 @@ namespace Projekt_2
             break;
 
           case 4:
+          // ToDo = Max antal gäster per bord ider till nästa gång:
+          // ? bara göra en gräns som påverkar antal gäster i case 2, som sen sparas i en seperat fil?
+
+
+          case 5:
             Console.WriteLine("Hejdå!");
             break;
 
