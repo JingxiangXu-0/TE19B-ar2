@@ -3,29 +3,29 @@ using System.IO;
 
 namespace File_Path
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
 
-            string filePath = @"C:\Demos\Test.txt";
-            // string[] lines = File.ReadAllLines(filePath);
-           
-            // Jobbigt att jobba med arrays så man kan använda list istället
-            
-            List<string> lines = File.ReadAllText(filePath).toList();
+      string filePath = @"C:\Demos\Test.txt";
+      // string[] lines = File.ReadAllLines(filePath);
 
-            foreach (string line in lines)
-            {       
-             Console.WriteLine(line);
-            }
-            lines.Add("Sue, Storm, www.Storm.com");
+      // Jobbigt att jobba med arrays så man kan använda list istället
 
-            File.WriteAllText(filepath, lines);
+      List<string> lines = File.ReadAllText(filePath).toList();
 
-            Console.ReadLine();        
+      foreach (string line in lines)
+      {
+        Console.WriteLine(line);
+      }
+      lines.Add("Sue, Storm, www.Storm.com");
 
-                // han använde clash? förstår inte har sökt men hittar inte vad jag ska göra, ska jobba på bordhantering istället.
-        }
+      File.WriteAllText(filepath, lines);
+
+      Console.ReadLine();
+
+      // han använde clash? förstår inte har sökt men hittar inte vad jag ska göra, ska jobba på bordhantering istället.
     }
+  }
 }
