@@ -1,20 +1,20 @@
-13;asd
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-2;da
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-88;Ji
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
-0;Inga gäster
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+2807;Joj;88888;100
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+0;Inga gäster;0kr
+100;4;1123123;1999
+100;Joj;1231231;8
+0;Inga gäster;0kr
+0;Inga gäster;0kr

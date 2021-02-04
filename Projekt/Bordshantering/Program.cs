@@ -9,7 +9,7 @@ namespace Projekt_2
     {
       string[] bordsInnehåll;
       string filnamn = "jingsbord.txt";
-      string tomtBord = "0;Inga gäster";
+      string tomtBord = "0;Inga gäster;0kr";
       int antalbord = 20;
 
       Console.WriteLine("Detta är Jings bordshanterare\nBordsinformation lästes in från fil");
@@ -29,10 +29,7 @@ namespace Projekt_2
           bordsInnehåll[i] = tomtBord;
         }
         File.WriteAllLines(filnamn, bordsInnehåll);
-        Console.WriteLine("Fil med bordsinformation fanns ej så ny fil skapades");
       }
-      // Tom rad innan det körs
-      Console.WriteLine();
 
       //  Programmets Meny
 
@@ -43,8 +40,7 @@ namespace Projekt_2
         Console.WriteLine("1. Visa alla bord");
         Console.WriteLine("2. Lägg ändra bordsinformation");
         Console.WriteLine("3. Markera att ett bord är tomt");
-        Console.WriteLine("4. Ändra Max antal gäster per bord");
-        Console.WriteLine("5. Avsluta programmet");
+        Console.WriteLine("4. Avsluta programmet");
         Console.Write("\nJag väljer alternativ : ");
         menuVal = int.Parse(Console.ReadLine());
 
@@ -55,11 +51,13 @@ namespace Projekt_2
           case 1:
             // om det är inte personer i ett bord
             int totaltAntalGäster = 0;
+            int totaltAntalPengar = 0;
+            int totaltMaxAntalGäster = 1000;
             for (int i = 0; i < bordsInnehåll.Length; i++)
             {
               if (bordsInnehåll[i] == tomtBord)
               {
-                Console.WriteLine($"Bord {i + 1} - Inga gäster");
+                Console.WriteLine($"Bord {i + 1} - Inga gäster, 0kr");
                 continue;
               }
 
@@ -67,11 +65,17 @@ namespace Projekt_2
               string[] specefikBord = bordsInnehåll[i].Split(';');
               int antalGäst = int.Parse(specefikBord[0]);
               string bordsnamn = specefikBord[1];
+              int antalPengar = int.Parse(specefikBord[2]);
+              int antalSittPlatser = int.Parse(specefikBord[3]);
               totaltAntalGäster += antalGäst;
-              Console.WriteLine($"Bord {i + 1} - Namn: {bordsnamn}, antal gäster: {antalGäst}");
+              totaltAntalPengar += antalPengar;
+              totaltMaxAntalGäster += antalSittPlatser;
+              Console.WriteLine($"Bord {i + 1} - Namn: {bordsnamn}, antal gäster: {antalGäst}, , Antal Sittplatser: {antalSittPlatser}, Nota: {antalPengar} kr");
 
             }
             Console.WriteLine($"\nTotalt antal gäster: {totaltAntalGäster}");
+            Console.WriteLine($"Totalt antalet Sittplatser kvar: {totaltMaxAntalGäster - totaltAntalGäster}");
+            Console.WriteLine($"Totalt antal Pengar: {totaltAntalPengar}");
             break;
 
           case 2:
@@ -84,13 +88,19 @@ namespace Projekt_2
               break;
             }
 
-            string[] BordInfoNy = new string[2];
+            string[] BordInfoNy = new string[4];
+
+            Console.WriteLine("Skriv in Borders antal Sittplatser");
+            BordInfoNy[3] = Console.ReadLine();
+
             Console.WriteLine("Hur många gäster finns vid bordet?");
             BordInfoNy[0] = Console.ReadLine();
-            // ToDo = Max antal gäster per bord
 
             Console.WriteLine("Skriv in Bordets namn");
             BordInfoNy[1] = Console.ReadLine();
+
+            Console.WriteLine("Hur stor nota ska bordet ha?");
+            BordInfoNy[2] = Console.ReadLine();
             bordsInnehåll[ändraBordsnummer - 1] = string.Join(";", BordInfoNy);
 
             // Uppdatera sparfilen
@@ -114,11 +124,6 @@ namespace Projekt_2
             break;
 
           case 4:
-          // ToDo = Max antal gäster per bord ider till nästa gång:
-          // ? bara göra en gräns som påverkar antal gäster i case 2, som sen sparas i en seperat fil?
-
-
-          case 5:
             Console.WriteLine("Hejdå!");
             break;
 
