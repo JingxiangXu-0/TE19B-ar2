@@ -12,7 +12,6 @@ namespace HittaBokstav
       string alfabetet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ";
       string[] morsekod = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", ".--", "...-", ".--", "-..-", "-.--", "--..", ".--.-", ".-.-", "---.", " " };
 
-
       int index = alfabetet.IndexOf(bokstav);
 
       string morseBokstav = morsekod[index];

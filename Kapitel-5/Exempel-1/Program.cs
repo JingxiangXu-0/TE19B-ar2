@@ -20,7 +20,6 @@ namespace Exempel_1
       länder[0] = "Sverige";
       länder[1] = "Frankrike";
 
-
       //   Skapa en array med int
       int[] årtal = new int[3];
       // årtal[0] = "1945";
